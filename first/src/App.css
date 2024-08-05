@@ -36,8 +36,15 @@
     transform: rotate(360deg);
   }
 }
-
-.main{
-  width: 100px;
+.row{
+  width: 1400px;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.carditem{
+  flex-basis: 23%;
+  margin: 1%;
   background-color: #61dafb;
+  height: 200px;
 }
