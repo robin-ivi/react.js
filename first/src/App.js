@@ -8,6 +8,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { blog } from './Data/blog';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   let a = "Krishna";
@@ -20,6 +22,7 @@ function App() {
     <div className="main">
       <Header email="wsa@gmail.com" asd={obj}>
         <h1>Wllo to header section</h1>
+        <FontAwesomeIcon icon={faCoffee} />
       </Header>
       {/* <Container fluid>
         <Row>
