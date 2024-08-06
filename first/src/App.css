@@ -43,7 +43,7 @@
   flex-wrap: wrap;
 }
 .carditem{
-  flex-basis: 23%;
+  flex-basis: 20%;
   margin: 1%;
   background-color: #61dafb;
   height: 200px;

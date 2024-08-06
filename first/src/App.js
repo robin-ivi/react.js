@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { blog } from './Data/blog';
 
 function App() {
   let a = "Krishna";
@@ -17,8 +18,10 @@ function App() {
   let j = true;
   return (
     <div className="main">
-      <Header email="wsa@gmail.com" asd={obj} />
-      <Container fluid>
+      <Header email="wsa@gmail.com" asd={obj}>
+        <h1>Wllo to header section</h1>
+      </Header>
+      {/* <Container fluid>
         <Row>
           <Col className='col-12 text-center py-4'>
             <h1>One Demo</h1>
@@ -76,6 +79,16 @@ function App() {
             </Card>
           </Col>
         </Row>
+      </Container> */}
+      <Container>
+        <Row>
+          { blog.map((v,i) =>{
+              return(
+
+                <ProductItems pitem={v} key={i}/>
+              )
+          } )}
+        </Row>
       </Container>
       <Footer />
     </div>
@@ -83,3 +96,18 @@ function App() {
 }
 
 export default App;
+function ProductItems({pitem}) {
+  return (
+    <div className="col-lg-3 mb-4">
+      <Card>
+      <Card.Body>
+        <Card.Title>{pitem.title}</Card.Title>
+        <Card.Text>
+        {pitem.body}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div >
+  )
+}

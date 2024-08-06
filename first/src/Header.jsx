@@ -1,8 +1,14 @@
-function Header(props) {
-    console.log(props)
+import React from 'react';
+
+function Header({ asd, children }) {
+    console.log(asd);
     return (
-        <h1>Welcome To RentalWheels {props.asd.name}</h1>
-    )
+        <div>
+            <h3>fdf</h3>
+            {children}
+            <h1>Welcome To RentalWheels {asd.name}</h1>
+        </div>
+    );
 }
 
-export {Header};
+export { Header };
